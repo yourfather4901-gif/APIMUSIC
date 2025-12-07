@@ -12,9 +12,9 @@ API_HASH = getenv("API_HASH")
 BOT_TOKEN = getenv("BOT_TOKEN")
 
 # Bot and owner info
-OWNER_USERNAME = getenv("OWNER_USERNAME", "SHIVANSHDEVS")
-BOT_USERNAME = getenv("BOT_USERNAME", "SapnaMusicRobot")
-BOT_NAME = getenv("BOT_NAME", "SAPNA")
+OWNER_USERNAME = getenv("OWNER_USERNAME", "ll_BLAZE_DRAGON_ll")
+BOT_USERNAME = getenv("BOT_USERNAME", "Feel_with_dragon_bot")
+BOT_NAME = getenv("BOT_NAME", "DRAGON X MUSIC")
 ASSUSERNAME = getenv("ASSUSERNAME", "KHWAAISH_HOON")
 
 # MongoDB
@@ -22,8 +22,8 @@ MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 
 # Limits and IDs
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 17000))
-LOGGER_ID = int(getenv("LOGGER_ID", -1002018556839))
-OWNER_ID = int(getenv("OWNER_ID", 6762113050))
+LOGGER_ID = int(getenv("LOGGER_ID", -1003194214901))
+OWNER_ID = int(getenv("OWNER_ID", 8431084788))
 
 # Heroku
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
@@ -35,8 +35,8 @@ UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
 GIT_TOKEN = getenv("GIT_TOKEN", None)
 
 # Support
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/ITSZSHUKLA")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/MASTIWITHFRIENDSXD")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/ECHOWAVESUPPORT01")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/ECHOWAVESUPPORT")
 
 # YT-API Get from @AmShashank on tg
 YOUR_API_KEY = getenv("YOUR_API_KEY", "")
@@ -80,9 +80,11 @@ confirmer = {}
 
 DEBUG_IGNORE_LOG = True
 
-###### IMAGE URLS ######
 
-START_IMG_URL = getenv("START_IMG_URL", "https://files.catbox.moe/t18g0v.jpg")
+###### VIDEO URL ######
+START_IMG_URL = getenv("START_IMG_URL", "https://files.catbox.moe/y8idrj.mp4")  # This is a video
+
+###### IMAGE URLS ######
 PING_IMG_URL = getenv("PING_IMG_URL", "https://files.catbox.moe/t18g0v.jpg")
 PLAYLIST_IMG_URL = "https://files.catbox.moe/t18g0v.jpg"
 STATS_IMG_URL = "https://files.catbox.moe/t18g0v.jpg"
@@ -94,6 +96,7 @@ YOUTUBE_IMG_URL = "https://telegra.ph/file/4dc854f961cd3ce46899b.jpg"
 SPOTIFY_ARTIST_IMG_URL = "https://telegra.ph/file/d723f4c80da157fca1678.jpg"
 SPOTIFY_ALBUM_IMG_URL = "https://telegra.ph/file/6c741a6bc1e1663ac96fc.jpg"
 SPOTIFY_PLAYLIST_IMG_URL = "https://telegra.ph/file/6c741a6bc1e1663ac96fc.jpg"
+
 
 # Helper function
 def time_to_seconds(time: str) -> int:

@@ -1,0 +1,554 @@
+[06-Dec-25 17:36:17 - INFO] - SHUKLAMUSIC.core.mongo - Connecting to your Mongo Database...
+[06-Dec-25 17:36:17 - INFO] - SHUKLAMUSIC.core.mongo - Connected to your Mongo Database.
+[06-Dec-25 17:36:17 - INFO] - SHUKLAMUSIC.core.dir - Directories Updated.
+[06-Dec-25 17:36:17 - INFO] - SHUKLAMUSIC.core.git - Git Client Found [VPS DEPLOYER]
+[06-Dec-25 17:36:17 - INFO] - SHUKLAMUSIC.misc - 𝗗𝗔𝗧𝗔𝗕𝗔𝗦𝗘 𝗟𝗢𝗔𝗗 𝗕𝗔𝗕𝗬🍫........
+[06-Dec-25 17:36:17 - INFO] - SHUKLAMUSIC.core.bot - Starting Bot...
+[06-Dec-25 17:36:18 - INFO] - SHUKLAMUSIC.misc - 𝗦𝗨𝗗𝗢 𝗨𝗦𝗘𝗥 𝗗𝗢𝗡𝗘✨🎋.
+[06-Dec-25 17:36:23 - ERROR] - SHUKLAMUSIC.core.bot - Bot has failed to access the log group/channel. Make sure that you have added your bot to your log group/channel.
+[06-Dec-25 17:37:31 - INFO] - SHUKLAMUSIC.core.mongo - Connecting to your Mongo Database...
+[06-Dec-25 17:37:31 - INFO] - SHUKLAMUSIC.core.mongo - Connected to your Mongo Database.
+[06-Dec-25 17:37:31 - INFO] - SHUKLAMUSIC.core.dir - Directories Updated.
+[06-Dec-25 17:37:31 - INFO] - SHUKLAMUSIC.core.git - Git Client Found [VPS DEPLOYER]
+[06-Dec-25 17:37:31 - INFO] - SHUKLAMUSIC.misc - 𝗗𝗔𝗧𝗔𝗕𝗔𝗦𝗘 𝗟𝗢𝗔𝗗 𝗕𝗔𝗕𝗬🍫........
+[06-Dec-25 17:37:31 - INFO] - SHUKLAMUSIC.core.bot - Starting Bot...
+[06-Dec-25 17:37:32 - INFO] - SHUKLAMUSIC.misc - 𝗦𝗨𝗗𝗢 𝗨𝗦𝗘𝗥 𝗗𝗢𝗡𝗘✨🎋.
+[06-Dec-25 17:37:37 - INFO] - SHUKLAMUSIC.core.bot - Music Bot Started as 𝗗𝗿𝗮𝗴𝗼𝗻 𝗫 𝗠𝘂𝘀𝗶𝗰 
+[06-Dec-25 17:37:38 - INFO] - SHUKLAMUSIC.plugins - 𝐀𝐥𝐥 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬 𝐋𝐨𝐚𝐝𝐞𝐝 𝐁𝐚𝐛𝐲🥳...
+[06-Dec-25 17:37:38 - INFO] - SHUKLAMUSIC.core.userbot - Starting Assistants...
+[06-Dec-25 17:37:40 - INFO] - SHUKLAMUSIC.core.userbot - Assistant Started as <a href=tg://user?id=8516123142>𝐀𝐧֟፝𝐬𝐡𝐮•ʏᴛ࿐</a>
+[06-Dec-25 17:37:40 - INFO] - SHUKLAMUSIC.core.call - Starting PyTgCalls Client...
+
+[06-Dec-25 17:37:45 - INFO] - SHUKLAMUSIC - ╔═════ஜ۩۞۩ஜ════╗
+  ☠︎︎𝗠𝗔𝗗𝗘 𝗕𝗬 𝗠𝗥 𝗦𝗛𝗜𝗩𝗔𝗡𝗦𝗛
+╚═════ஜ۩۞۩ஜ════╝
+[06-Dec-25 17:37:54 - ERROR] - pyrogram.dispatcher - Unhandled exception: Telegram says: [400 PEER_ID_INVALID]  Pyrogram 2.3.68 thinks: The peer id being used is invalid or not known yet. Make sure you meet the peer before interacting with it
+Traceback (most recent call last):
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/methods/advanced/resolve_peer.py", line 63, in resolve_peer
+    return await self.storage.get_peer_by_id(peer_id)
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/storage/sqlite_storage.py", line 210, in get_peer_by_id
+    raise KeyError(f"ID not found: {peer_id}")
+KeyError: 'ID not found: 8431084788'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/methods/advanced/resolve_peer.py", line 125, in resolve_peer
+    return await self.storage.get_peer_by_id(peer_id)
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/storage/sqlite_storage.py", line 210, in get_peer_by_id
+    raise KeyError(f"ID not found: {peer_id}")
+KeyError: 'ID not found: 8431084788'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 378, in _dispatch_to_handlers
+    await self._execute_handler(handler, *args)
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 405, in _execute_handler
+    await handler.callback(self.client, *args)
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/handlers/message_handler.py", line 154, in resolve_future_or_callback
+    await self.original_callback(client, message, *args)
+  File "/workspaces/APIMUSIC/SHUKLAMUSIC/utils/decorators/language.py", line 56, in wrapper
+    return await mystic(_, message, language)
+  File "/workspaces/APIMUSIC/SHUKLAMUSIC/plugins/bot/start.py", line 122, in start_pm
+    await message.reply_photo(
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/types/messages_and_media/message.py", line 3156, in reply_photo
+    return await self._client.send_photo(
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/methods/messages/send_photo.py", line 257, in send_photo
+    reply_markup=await reply_markup.write(self) if reply_markup else None,
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/types/bots_and_keyboards/inline_keyboard_markup.py", line 66, in write
+    buttons.append(await b.write(client))
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/types/bots_and_keyboards/inline_keyboard_button.py", line 205, in write
+    user_id=await client.resolve_peer(self.user_id)
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/methods/advanced/resolve_peer.py", line 127, in resolve_peer
+    raise PeerIdInvalid
+pyrogram.errors.exceptions.bad_request_400.PeerIdInvalid: Telegram says: [400 PEER_ID_INVALID]  Pyrogram 2.3.68 thinks: The peer id being used is invalid or not known yet. Make sure you meet the peer before interacting with it
+[06-Dec-25 17:39:21 - ERROR] - pyrogram.dispatcher - Unhandled exception: Telegram says: [400 PEER_ID_INVALID]  Pyrogram 2.3.68 thinks: The peer id being used is invalid or not known yet. Make sure you meet the peer before interacting with it
+Traceback (most recent call last):
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/methods/advanced/resolve_peer.py", line 63, in resolve_peer
+    return await self.storage.get_peer_by_id(peer_id)
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/storage/sqlite_storage.py", line 210, in get_peer_by_id
+    raise KeyError(f"ID not found: {peer_id}")
+KeyError: 'ID not found: 8431084788'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/methods/advanced/resolve_peer.py", line 125, in resolve_peer
+    return await self.storage.get_peer_by_id(peer_id)
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/storage/sqlite_storage.py", line 210, in get_peer_by_id
+    raise KeyError(f"ID not found: {peer_id}")
+KeyError: 'ID not found: 8431084788'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 378, in _dispatch_to_handlers
+    await self._execute_handler(handler, *args)
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 405, in _execute_handler
+    await handler.callback(self.client, *args)
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/handlers/message_handler.py", line 154, in resolve_future_or_callback
+    await self.original_callback(client, message, *args)
+  File "/workspaces/APIMUSIC/SHUKLAMUSIC/utils/decorators/language.py", line 56, in wrapper
+    return await mystic(_, message, language)
+  File "/workspaces/APIMUSIC/SHUKLAMUSIC/plugins/bot/start.py", line 122, in start_pm
+    await message.reply_photo(
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/types/messages_and_media/message.py", line 3156, in reply_photo
+    return await self._client.send_photo(
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/methods/messages/send_photo.py", line 257, in send_photo
+    reply_markup=await reply_markup.write(self) if reply_markup else None,
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/types/bots_and_keyboards/inline_keyboard_markup.py", line 66, in write
+    buttons.append(await b.write(client))
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/types/bots_and_keyboards/inline_keyboard_button.py", line 205, in write
+    user_id=await client.resolve_peer(self.user_id)
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/methods/advanced/resolve_peer.py", line 127, in resolve_peer
+    raise PeerIdInvalid
+pyrogram.errors.exceptions.bad_request_400.PeerIdInvalid: Telegram says: [400 PEER_ID_INVALID]  Pyrogram 2.3.68 thinks: The peer id being used is invalid or not known yet. Make sure you meet the peer before interacting with it
+[06-Dec-25 17:41:54 - ERROR] - pyrogram.dispatcher - Unhandled exception: Telegram says: [400 PEER_ID_INVALID]  Pyrogram 2.3.68 thinks: The peer id being used is invalid or not known yet. Make sure you meet the peer before interacting with it
+Traceback (most recent call last):
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/methods/advanced/resolve_peer.py", line 63, in resolve_peer
+    return await self.storage.get_peer_by_id(peer_id)
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/storage/sqlite_storage.py", line 210, in get_peer_by_id
+    raise KeyError(f"ID not found: {peer_id}")
+KeyError: 'ID not found: 8431084788'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/methods/advanced/resolve_peer.py", line 125, in resolve_peer
+    return await self.storage.get_peer_by_id(peer_id)
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/storage/sqlite_storage.py", line 210, in get_peer_by_id
+    raise KeyError(f"ID not found: {peer_id}")
+KeyError: 'ID not found: 8431084788'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 378, in _dispatch_to_handlers
+    await self._execute_handler(handler, *args)
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 405, in _execute_handler
+    await handler.callback(self.client, *args)
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/handlers/message_handler.py", line 154, in resolve_future_or_callback
+    await self.original_callback(client, message, *args)
+  File "/workspaces/APIMUSIC/SHUKLAMUSIC/utils/decorators/language.py", line 56, in wrapper
+    return await mystic(_, message, language)
+  File "/workspaces/APIMUSIC/SHUKLAMUSIC/plugins/bot/start.py", line 122, in start_pm
+    await message.reply_photo(
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/types/messages_and_media/message.py", line 3156, in reply_photo
+    return await self._client.send_photo(
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/methods/messages/send_photo.py", line 257, in send_photo
+    reply_markup=await reply_markup.write(self) if reply_markup else None,
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/types/bots_and_keyboards/inline_keyboard_markup.py", line 66, in write
+    buttons.append(await b.write(client))
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/types/bots_and_keyboards/inline_keyboard_button.py", line 205, in write
+    user_id=await client.resolve_peer(self.user_id)
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/methods/advanced/resolve_peer.py", line 127, in resolve_peer
+    raise PeerIdInvalid
+pyrogram.errors.exceptions.bad_request_400.PeerIdInvalid: Telegram says: [400 PEER_ID_INVALID]  Pyrogram 2.3.68 thinks: The peer id being used is invalid or not known yet. Make sure you meet the peer before interacting with it
+[06-Dec-25 17:48:46 - INFO] - root - Stop signal received (SIGINT). Exiting...
+[06-Dec-25 17:48:46 - INFO] - SHUKLAMUSIC.core.userbot - Stopping Assistants...
+[06-Dec-25 17:48:46 - INFO] - SHUKLAMUSIC - 𝗦𝗧𝗢𝗣 𝗦𝗧𝗥𝗔𝗡𝗚𝗘𝗥 𝗠𝗨𝗦𝗜𝗖🎻 𝗕𝗢𝗧..
+[06-Dec-25 17:48:51 - INFO] - SHUKLAMUSIC.core.mongo - Connecting to your Mongo Database...
+[06-Dec-25 17:48:51 - INFO] - SHUKLAMUSIC.core.mongo - Connected to your Mongo Database.
+[06-Dec-25 17:48:51 - INFO] - SHUKLAMUSIC.core.dir - Directories Updated.
+[06-Dec-25 17:48:51 - INFO] - SHUKLAMUSIC.core.git - Git Client Found [VPS DEPLOYER]
+[06-Dec-25 17:48:51 - INFO] - SHUKLAMUSIC.misc - 𝗗𝗔𝗧𝗔𝗕𝗔𝗦𝗘 𝗟𝗢𝗔𝗗 𝗕𝗔𝗕𝗬🍫........
+[06-Dec-25 17:48:51 - INFO] - SHUKLAMUSIC.core.bot - Starting Bot...
+[06-Dec-25 17:48:52 - INFO] - SHUKLAMUSIC.misc - 𝗦𝗨𝗗𝗢 𝗨𝗦𝗘𝗥 𝗗𝗢𝗡𝗘✨🎋.
+[06-Dec-25 17:48:58 - INFO] - SHUKLAMUSIC.core.bot - Music Bot Started as 𝗗𝗿𝗮𝗴𝗼𝗻 𝗫 𝗠𝘂𝘀𝗶𝗰 
+[06-Dec-25 17:48:58 - INFO] - SHUKLAMUSIC.plugins - 𝐀𝐥𝐥 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬 𝐋𝐨𝐚𝐝𝐞𝐝 𝐁𝐚𝐛𝐲🥳...
+[06-Dec-25 17:48:58 - INFO] - SHUKLAMUSIC.core.userbot - Starting Assistants...
+[06-Dec-25 17:49:01 - INFO] - SHUKLAMUSIC.core.userbot - Assistant Started as <a href=tg://user?id=8516123142>𝐀𝐧֟፝𝐬𝐡𝐮•ʏᴛ࿐</a>
+[06-Dec-25 17:49:01 - INFO] - SHUKLAMUSIC.core.call - Starting PyTgCalls Client...
+
+[06-Dec-25 17:49:07 - INFO] - SHUKLAMUSIC - ╔═════ஜ۩۞۩ஜ════╗
+  ☠︎︎𝗠𝗔𝗗𝗘 𝗕𝗬 𝗠𝗥 𝗦𝗛𝗜𝗩𝗔𝗡𝗦𝗛
+╚═════ஜ۩۞۩ஜ════╝
+[06-Dec-25 17:49:14 - ERROR] - pyrogram.dispatcher - Unhandled exception: Telegram says: [400 PEER_ID_INVALID]  Pyrogram 2.3.68 thinks: The peer id being used is invalid or not known yet. Make sure you meet the peer before interacting with it
+Traceback (most recent call last):
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/methods/advanced/resolve_peer.py", line 63, in resolve_peer
+    return await self.storage.get_peer_by_id(peer_id)
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/storage/sqlite_storage.py", line 210, in get_peer_by_id
+    raise KeyError(f"ID not found: {peer_id}")
+KeyError: 'ID not found: 8431084788'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/methods/advanced/resolve_peer.py", line 125, in resolve_peer
+    return await self.storage.get_peer_by_id(peer_id)
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/storage/sqlite_storage.py", line 210, in get_peer_by_id
+    raise KeyError(f"ID not found: {peer_id}")
+KeyError: 'ID not found: 8431084788'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 378, in _dispatch_to_handlers
+    await self._execute_handler(handler, *args)
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 405, in _execute_handler
+    await handler.callback(self.client, *args)
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/handlers/callback_query_handler.py", line 207, in resolve_future_or_callback
+    await self.original_callback(client, query, *args)
+  File "/workspaces/APIMUSIC/SHUKLAMUSIC/utils/decorators/language.py", line 44, in wrapper
+    return await mystic(_, CallbackQuery, language)
+  File "/workspaces/APIMUSIC/SHUKLAMUSIC/plugins/bot/settings.py", line 78, in settings_back_markup
+    await app.resolve_peer(OWNER_ID)
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/methods/advanced/resolve_peer.py", line 127, in resolve_peer
+    raise PeerIdInvalid
+pyrogram.errors.exceptions.bad_request_400.PeerIdInvalid: Telegram says: [400 PEER_ID_INVALID]  Pyrogram 2.3.68 thinks: The peer id being used is invalid or not known yet. Make sure you meet the peer before interacting with it
+[06-Dec-25 17:49:18 - ERROR] - pyrogram.dispatcher - Unhandled exception: Telegram says: [400 PEER_ID_INVALID]  Pyrogram 2.3.68 thinks: The peer id being used is invalid or not known yet. Make sure you meet the peer before interacting with it
+Traceback (most recent call last):
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/methods/advanced/resolve_peer.py", line 63, in resolve_peer
+    return await self.storage.get_peer_by_id(peer_id)
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/storage/sqlite_storage.py", line 210, in get_peer_by_id
+    raise KeyError(f"ID not found: {peer_id}")
+KeyError: 'ID not found: 8431084788'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/methods/advanced/resolve_peer.py", line 125, in resolve_peer
+    return await self.storage.get_peer_by_id(peer_id)
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/storage/sqlite_storage.py", line 210, in get_peer_by_id
+    raise KeyError(f"ID not found: {peer_id}")
+KeyError: 'ID not found: 8431084788'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 378, in _dispatch_to_handlers
+    await self._execute_handler(handler, *args)
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 405, in _execute_handler
+    await handler.callback(self.client, *args)
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/handlers/callback_query_handler.py", line 207, in resolve_future_or_callback
+    await self.original_callback(client, query, *args)
+  File "/workspaces/APIMUSIC/SHUKLAMUSIC/utils/decorators/language.py", line 44, in wrapper
+    return await mystic(_, CallbackQuery, language)
+  File "/workspaces/APIMUSIC/SHUKLAMUSIC/plugins/bot/settings.py", line 78, in settings_back_markup
+    await app.resolve_peer(OWNER_ID)
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/methods/advanced/resolve_peer.py", line 127, in resolve_peer
+    raise PeerIdInvalid
+pyrogram.errors.exceptions.bad_request_400.PeerIdInvalid: Telegram says: [400 PEER_ID_INVALID]  Pyrogram 2.3.68 thinks: The peer id being used is invalid or not known yet. Make sure you meet the peer before interacting with it
+[06-Dec-25 17:53:29 - ERROR] - pyrogram.dispatcher - Unhandled exception: Telegram says: [400 PEER_ID_INVALID]  Pyrogram 2.3.68 thinks: The peer id being used is invalid or not known yet. Make sure you meet the peer before interacting with it
+Traceback (most recent call last):
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/methods/advanced/resolve_peer.py", line 63, in resolve_peer
+    return await self.storage.get_peer_by_id(peer_id)
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/storage/sqlite_storage.py", line 210, in get_peer_by_id
+    raise KeyError(f"ID not found: {peer_id}")
+KeyError: 'ID not found: 8431084788'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/methods/advanced/resolve_peer.py", line 125, in resolve_peer
+    return await self.storage.get_peer_by_id(peer_id)
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/storage/sqlite_storage.py", line 210, in get_peer_by_id
+    raise KeyError(f"ID not found: {peer_id}")
+KeyError: 'ID not found: 8431084788'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 378, in _dispatch_to_handlers
+    await self._execute_handler(handler, *args)
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 405, in _execute_handler
+    await handler.callback(self.client, *args)
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/handlers/callback_query_handler.py", line 207, in resolve_future_or_callback
+    await self.original_callback(client, query, *args)
+  File "/workspaces/APIMUSIC/SHUKLAMUSIC/utils/decorators/language.py", line 44, in wrapper
+    return await mystic(_, CallbackQuery, language)
+  File "/workspaces/APIMUSIC/SHUKLAMUSIC/plugins/bot/settings.py", line 78, in settings_back_markup
+    # await app.resolve_peer(OWNER_ID)
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/methods/advanced/resolve_peer.py", line 127, in resolve_peer
+    raise PeerIdInvalid
+pyrogram.errors.exceptions.bad_request_400.PeerIdInvalid: Telegram says: [400 PEER_ID_INVALID]  Pyrogram 2.3.68 thinks: The peer id being used is invalid or not known yet. Make sure you meet the peer before interacting with it
+[06-Dec-25 17:53:36 - INFO] - root - Stop signal received (SIGINT). Exiting...
+[06-Dec-25 17:53:36 - INFO] - SHUKLAMUSIC.core.userbot - Stopping Assistants...
+[06-Dec-25 17:53:36 - INFO] - SHUKLAMUSIC - 𝗦𝗧𝗢𝗣 𝗦𝗧𝗥𝗔𝗡𝗚𝗘𝗥 𝗠𝗨𝗦𝗜𝗖🎻 𝗕𝗢𝗧..
+[06-Dec-25 17:53:39 - INFO] - SHUKLAMUSIC.core.mongo - Connecting to your Mongo Database...
+[06-Dec-25 17:53:39 - INFO] - SHUKLAMUSIC.core.mongo - Connected to your Mongo Database.
+[06-Dec-25 17:53:39 - INFO] - SHUKLAMUSIC.core.dir - Directories Updated.
+[06-Dec-25 17:53:39 - INFO] - SHUKLAMUSIC.core.git - Git Client Found [VPS DEPLOYER]
+[06-Dec-25 17:53:39 - INFO] - SHUKLAMUSIC.misc - 𝗗𝗔𝗧𝗔𝗕𝗔𝗦𝗘 𝗟𝗢𝗔𝗗 𝗕𝗔𝗕𝗬🍫........
+[06-Dec-25 17:53:39 - INFO] - SHUKLAMUSIC.core.bot - Starting Bot...
+[06-Dec-25 17:53:40 - INFO] - SHUKLAMUSIC.misc - 𝗦𝗨𝗗𝗢 𝗨𝗦𝗘𝗥 𝗗𝗢𝗡𝗘✨🎋.
+[06-Dec-25 17:53:46 - INFO] - SHUKLAMUSIC.core.bot - Music Bot Started as 𝗗𝗿𝗮𝗴𝗼𝗻 𝗫 𝗠𝘂𝘀𝗶𝗰 
+[06-Dec-25 17:53:46 - INFO] - SHUKLAMUSIC.plugins - 𝐀𝐥𝐥 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬 𝐋𝐨𝐚𝐝𝐞𝐝 𝐁𝐚𝐛𝐲🥳...
+[06-Dec-25 17:53:46 - INFO] - SHUKLAMUSIC.core.userbot - Starting Assistants...
+[06-Dec-25 17:53:48 - INFO] - SHUKLAMUSIC.core.userbot - Assistant Started as <a href=tg://user?id=8516123142>𝐀𝐧֟፝𝐬𝐡𝐮•ʏᴛ࿐</a>
+[06-Dec-25 17:53:48 - INFO] - SHUKLAMUSIC.core.call - Starting PyTgCalls Client...
+
+[06-Dec-25 17:53:48 - ERROR] - pyrogram.dispatcher - Unhandled exception: Telegram says: [400 PEER_ID_INVALID]  Pyrogram 2.3.68 thinks: The peer id being used is invalid or not known yet. Make sure you meet the peer before interacting with it
+Traceback (most recent call last):
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/methods/advanced/resolve_peer.py", line 63, in resolve_peer
+    return await self.storage.get_peer_by_id(peer_id)
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/storage/sqlite_storage.py", line 210, in get_peer_by_id
+    raise KeyError(f"ID not found: {peer_id}")
+KeyError: 'ID not found: 8431084788'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/methods/advanced/resolve_peer.py", line 125, in resolve_peer
+    return await self.storage.get_peer_by_id(peer_id)
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/storage/sqlite_storage.py", line 210, in get_peer_by_id
+    raise KeyError(f"ID not found: {peer_id}")
+KeyError: 'ID not found: 8431084788'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 378, in _dispatch_to_handlers
+    await self._execute_handler(handler, *args)
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/dispatcher.py", line 405, in _execute_handler
+    await handler.callback(self.client, *args)
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/handlers/callback_query_handler.py", line 207, in resolve_future_or_callback
+    await self.original_callback(client, query, *args)
+  File "/workspaces/APIMUSIC/SHUKLAMUSIC/utils/decorators/language.py", line 44, in wrapper
+    return await mystic(_, CallbackQuery, language)
+  File "/workspaces/APIMUSIC/SHUKLAMUSIC/plugins/bot/settings.py", line 81, in settings_back_markup
+    return await CallbackQuery.edit_message_text(
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/types/bots_and_keyboards/callback_query.py", line 217, in edit_message_text
+    return await self._client.edit_message_text(
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/methods/messages/edit_message_text.py", line 98, in edit_message_text
+    reply_markup=await reply_markup.write(self) if reply_markup else None,
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/types/bots_and_keyboards/inline_keyboard_markup.py", line 66, in write
+    buttons.append(await b.write(client))
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/types/bots_and_keyboards/inline_keyboard_button.py", line 205, in write
+    user_id=await client.resolve_peer(self.user_id)
+  File "/workspaces/APIMUSIC/venv/lib/python3.10/site-packages/pyrogram/methods/advanced/resolve_peer.py", line 127, in resolve_peer
+    raise PeerIdInvalid
+pyrogram.errors.exceptions.bad_request_400.PeerIdInvalid: Telegram says: [400 PEER_ID_INVALID]  Pyrogram 2.3.68 thinks: The peer id being used is invalid or not known yet. Make sure you meet the peer before interacting with it
+[06-Dec-25 17:53:51 - INFO] - SHUKLAMUSIC - ╔═════ஜ۩۞۩ஜ════╗
+  ☠︎︎𝗠𝗔𝗗𝗘 𝗕𝗬 𝗠𝗥 𝗦𝗛𝗜𝗩𝗔𝗡𝗦𝗛
+╚═════ஜ۩۞۩ஜ════╝
+[06-Dec-25 18:02:03 - INFO] - root - Stop signal received (SIGINT). Exiting...
+[06-Dec-25 18:02:03 - INFO] - SHUKLAMUSIC.core.userbot - Stopping Assistants...
+[06-Dec-25 18:02:03 - INFO] - SHUKLAMUSIC - 𝗦𝗧𝗢𝗣 𝗦𝗧𝗥𝗔𝗡𝗚𝗘𝗥 𝗠𝗨𝗦𝗜𝗖🎻 𝗕𝗢𝗧..
+[06-Dec-25 18:02:06 - INFO] - SHUKLAMUSIC.core.mongo - Connecting to your Mongo Database...
+[06-Dec-25 18:02:06 - INFO] - SHUKLAMUSIC.core.mongo - Connected to your Mongo Database.
+[06-Dec-25 18:02:06 - INFO] - SHUKLAMUSIC.core.dir - Directories Updated.
+[06-Dec-25 18:02:06 - INFO] - SHUKLAMUSIC.core.git - Git Client Found [VPS DEPLOYER]
+[06-Dec-25 18:02:06 - INFO] - SHUKLAMUSIC.misc - 𝗗𝗔𝗧𝗔𝗕𝗔𝗦𝗘 𝗟𝗢𝗔𝗗 𝗕𝗔𝗕𝗬🍫........
+[06-Dec-25 18:02:06 - INFO] - SHUKLAMUSIC.core.bot - Starting Bot...
+[06-Dec-25 18:02:07 - INFO] - SHUKLAMUSIC.misc - 𝗦𝗨𝗗𝗢 𝗨𝗦𝗘𝗥 𝗗𝗢𝗡𝗘✨🎋.
+[06-Dec-25 18:02:14 - INFO] - SHUKLAMUSIC.core.bot - Music Bot Started as 𝗗𝗿𝗮𝗴𝗼𝗻 𝗫 𝗠𝘂𝘀𝗶𝗰 
+[06-Dec-25 18:02:14 - INFO] - SHUKLAMUSIC.plugins - 𝐀𝐥𝐥 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬 𝐋𝐨𝐚𝐝𝐞𝐝 𝐁𝐚𝐛𝐲🥳...
+[06-Dec-25 18:02:14 - INFO] - SHUKLAMUSIC.core.userbot - Starting Assistants...
+[06-Dec-25 18:02:16 - INFO] - SHUKLAMUSIC.core.userbot - Assistant Started as <a href=tg://user?id=8516123142>𝐀𝐧֟፝𝐬𝐡𝐮•ʏᴛ࿐</a>
+[06-Dec-25 18:02:16 - INFO] - SHUKLAMUSIC.core.call - Starting PyTgCalls Client...
+
+[06-Dec-25 18:02:18 - INFO] - SHUKLAMUSIC - ╔═════ஜ۩۞۩ஜ════╗
+  ☠︎︎𝗠𝗔𝗗𝗘 𝗕𝗬 𝗠𝗥 𝗦𝗛𝗜𝗩𝗔𝗡𝗦𝗛
+╚═════ஜ۩۞۩ஜ════╝
+[06-Dec-25 18:03:41 - INFO] - StrangerAPI/Youtube.py - 🎵 [AUDIO] Starting download for: JFUoE0ArWd4
+[06-Dec-25 18:03:41 - INFO] - StrangerAPI/Youtube.py - 🔄 [AUDIO] Requesting from API: JFUoE0ArWd4
+[06-Dec-25 18:04:42 - ERROR] - StrangerAPI/Youtube.py - ⏱️ [AUDIO] Timeout: JFUoE0ArWd4
+[06-Dec-25 18:06:15 - INFO] - StrangerAPI/Youtube.py - 🎵 [AUDIO] Starting download for: JFUoE0ArWd4
+[06-Dec-25 18:06:15 - INFO] - StrangerAPI/Youtube.py - 🔄 [AUDIO] Requesting from API: JFUoE0ArWd4
+[06-Dec-25 18:07:15 - ERROR] - StrangerAPI/Youtube.py - ⏱️ [AUDIO] Timeout: JFUoE0ArWd4
+[06-Dec-25 18:13:56 - INFO] - root - Stop signal received (SIGINT). Exiting...
+[06-Dec-25 18:13:56 - INFO] - SHUKLAMUSIC.core.userbot - Stopping Assistants...
+[06-Dec-25 18:13:56 - INFO] - SHUKLAMUSIC - 𝗦𝗧𝗢𝗣 𝗦𝗧𝗥𝗔𝗡𝗚𝗘𝗥 𝗠𝗨𝗦𝗜𝗖🎻 𝗕𝗢𝗧..
+[06-Dec-25 18:13:59 - INFO] - SHUKLAMUSIC.core.mongo - Connecting to your Mongo Database...
+[06-Dec-25 18:13:59 - INFO] - SHUKLAMUSIC.core.mongo - Connected to your Mongo Database.
+[06-Dec-25 18:13:59 - INFO] - SHUKLAMUSIC.core.dir - Directories Updated.
+[06-Dec-25 18:13:59 - INFO] - SHUKLAMUSIC.core.git - Git Client Found [VPS DEPLOYER]
+[06-Dec-25 18:13:59 - INFO] - SHUKLAMUSIC.misc - 𝗗𝗔𝗧𝗔𝗕𝗔𝗦𝗘 𝗟𝗢𝗔𝗗 𝗕𝗔𝗕𝗬🍫........
+[06-Dec-25 18:13:59 - INFO] - SHUKLAMUSIC.core.bot - Starting Bot...
+[06-Dec-25 18:14:01 - INFO] - ShuklaMusic.platforms.Youtube.py - API URL loaded successfully
+[06-Dec-25 18:14:01 - INFO] - SHUKLAMUSIC.misc - 𝗦𝗨𝗗𝗢 𝗨𝗦𝗘𝗥 𝗗𝗢𝗡𝗘✨🎋.
+[06-Dec-25 18:14:07 - INFO] - SHUKLAMUSIC.core.bot - Music Bot Started as 𝗗𝗿𝗮𝗴𝗼𝗻 𝗫 𝗠𝘂𝘀𝗶𝗰 
+[06-Dec-25 18:14:07 - INFO] - SHUKLAMUSIC.plugins - 𝐀𝐥𝐥 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬 𝐋𝐨𝐚𝐝𝐞𝐝 𝐁𝐚𝐛𝐲🥳...
+[06-Dec-25 18:14:07 - INFO] - SHUKLAMUSIC.core.userbot - Starting Assistants...
+[06-Dec-25 18:14:09 - INFO] - SHUKLAMUSIC.core.userbot - Assistant Started as <a href=tg://user?id=8516123142>𝐀𝐧֟፝𝐬𝐡𝐮•ʏᴛ࿐</a>
+[06-Dec-25 18:14:09 - INFO] - SHUKLAMUSIC.core.call - Starting PyTgCalls Client...
+
+[06-Dec-25 18:14:12 - INFO] - SHUKLAMUSIC - ╔═════ஜ۩۞۩ஜ════╗
+  ☠︎︎𝗠𝗔𝗗𝗘 𝗕𝗬 𝗠𝗥 𝗦𝗛𝗜𝗩𝗔𝗡𝗦𝗛
+╚═════ஜ۩۞۩ஜ════╝
+[06-Dec-25 18:14:25 - INFO] - ShuklaMusic.platforms.Youtube.py - [DOWNLOADED] downloads/JFUoE0ArWd4.mp3
+[06-Dec-25 18:14:34 - INFO] - root - Stop signal received (SIGINT). Exiting...
+[06-Dec-25 18:14:34 - INFO] - SHUKLAMUSIC.core.userbot - Stopping Assistants...
+[06-Dec-25 18:14:34 - INFO] - SHUKLAMUSIC - 𝗦𝗧𝗢𝗣 𝗦𝗧𝗥𝗔𝗡𝗚𝗘𝗥 𝗠𝗨𝗦𝗜𝗖🎻 𝗕𝗢𝗧..
+[06-Dec-25 18:15:03 - INFO] - SHUKLAMUSIC.core.mongo - Connecting to your Mongo Database...
+[06-Dec-25 18:15:03 - INFO] - SHUKLAMUSIC.core.mongo - Connected to your Mongo Database.
+[06-Dec-25 18:15:03 - INFO] - SHUKLAMUSIC.core.dir - Directories Updated.
+[06-Dec-25 18:15:03 - INFO] - SHUKLAMUSIC.core.git - Git Client Found [VPS DEPLOYER]
+[06-Dec-25 18:15:03 - INFO] - SHUKLAMUSIC.misc - 𝗗𝗔𝗧𝗔𝗕𝗔𝗦𝗘 𝗟𝗢𝗔𝗗 𝗕𝗔𝗕𝗬🍫........
+[06-Dec-25 18:15:03 - INFO] - SHUKLAMUSIC.core.bot - Starting Bot...
+[06-Dec-25 18:15:05 - INFO] - ShuklaMusic.platforms.Youtube.py - API URL loaded successfully
+[06-Dec-25 18:15:05 - INFO] - SHUKLAMUSIC.misc - 𝗦𝗨𝗗𝗢 𝗨𝗦𝗘𝗥 𝗗𝗢𝗡𝗘✨🎋.
+[06-Dec-25 18:15:11 - INFO] - SHUKLAMUSIC.core.bot - Music Bot Started as 𝗗𝗿𝗮𝗴𝗼𝗻 𝗫 𝗠𝘂𝘀𝗶𝗰 
+[06-Dec-25 18:15:11 - INFO] - SHUKLAMUSIC.plugins - 𝐀𝐥𝐥 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬 𝐋𝐨𝐚𝐝𝐞𝐝 𝐁𝐚𝐛𝐲🥳...
+[06-Dec-25 18:15:11 - INFO] - SHUKLAMUSIC.core.userbot - Starting Assistants...
+[06-Dec-25 18:15:13 - INFO] - SHUKLAMUSIC.core.userbot - Assistant Started as <a href=tg://user?id=8516123142>𝐀𝐧֟፝𝐬𝐡𝐮•ʏᴛ࿐</a>
+[06-Dec-25 18:15:13 - INFO] - SHUKLAMUSIC.core.call - Starting PyTgCalls Client...
+
+[06-Dec-25 18:15:15 - INFO] - SHUKLAMUSIC - ╔═════ஜ۩۞۩ஜ════╗
+  ☠︎︎𝗠𝗔𝗗𝗘 𝗕𝗬 𝗠𝗥 𝗦𝗛𝗜𝗩𝗔𝗡𝗦𝗛
+╚═════ஜ۩۞۩ஜ════╝
+[06-Dec-25 18:15:20 - INFO] - ShuklaMusic.platforms.Youtube.py - [LOCAL] File exists: downloads/JFUoE0ArWd4.mp3
+[06-Dec-25 18:15:54 - INFO] - root - Stop signal received (SIGINT). Exiting...
+[06-Dec-25 18:15:54 - INFO] - SHUKLAMUSIC.core.userbot - Stopping Assistants...
+[06-Dec-25 18:15:54 - INFO] - SHUKLAMUSIC - 𝗦𝗧𝗢𝗣 𝗦𝗧𝗥𝗔𝗡𝗚𝗘𝗥 𝗠𝗨𝗦𝗜𝗖🎻 𝗕𝗢𝗧..
+[06-Dec-25 18:17:50 - INFO] - SHUKLAMUSIC.core.mongo - Connecting to your Mongo Database...
+[06-Dec-25 18:17:50 - INFO] - SHUKLAMUSIC.core.mongo - Connected to your Mongo Database.
+[06-Dec-25 18:17:50 - INFO] - SHUKLAMUSIC.core.dir - Directories Updated.
+[06-Dec-25 18:17:50 - INFO] - SHUKLAMUSIC.core.git - Git Client Found [VPS DEPLOYER]
+[06-Dec-25 18:17:50 - INFO] - SHUKLAMUSIC.misc - 𝗗𝗔𝗧𝗔𝗕𝗔𝗦𝗘 𝗟𝗢𝗔𝗗 𝗕𝗔𝗕𝗬🍫........
+[06-Dec-25 18:17:50 - INFO] - SHUKLAMUSIC.core.bot - Starting Bot...
+[06-Dec-25 18:17:51 - INFO] - ShuklaMusic.platforms.Youtube.py - API URL loaded successfully
+[06-Dec-25 18:17:51 - INFO] - SHUKLAMUSIC.misc - 𝗦𝗨𝗗𝗢 𝗨𝗦𝗘𝗥 𝗗𝗢𝗡𝗘✨🎋.
+[06-Dec-25 18:17:58 - INFO] - SHUKLAMUSIC.core.bot - Music Bot Started as 𝗗𝗿𝗮𝗴𝗼𝗻 𝗫 𝗠𝘂𝘀𝗶𝗰 
+[06-Dec-25 18:17:58 - INFO] - SHUKLAMUSIC.plugins - 𝐀𝐥𝐥 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬 𝐋𝐨𝐚𝐝𝐞𝐝 𝐁𝐚𝐛𝐲🥳...
+[06-Dec-25 18:17:58 - INFO] - SHUKLAMUSIC.core.userbot - Starting Assistants...
+[06-Dec-25 18:18:00 - INFO] - SHUKLAMUSIC.core.userbot - Assistant Started as <a href=tg://user?id=8516123142>𝐀𝐧֟፝𝐬𝐡𝐮•ʏᴛ࿐</a>
+[06-Dec-25 18:18:00 - INFO] - SHUKLAMUSIC.core.call - Starting PyTgCalls Client...
+
+[06-Dec-25 18:18:06 - INFO] - SHUKLAMUSIC - ╔═════ஜ۩۞۩ஜ════╗
+  ☠︎︎𝗠𝗔𝗗𝗘 𝗕𝗬 𝗠𝗥 𝗦𝗛𝗜𝗩𝗔𝗡𝗦𝗛
+╚═════ஜ۩۞۩ஜ════╝
+[06-Dec-25 18:18:46 - INFO] - ShuklaMusic.platforms.Youtube.py - [DOWNLOADED] downloads/_ZMdLTUTB1c.mp3
+[06-Dec-25 18:34:04 - INFO] - root - Stop signal received (SIGINT). Exiting...
+[06-Dec-25 18:34:04 - INFO] - SHUKLAMUSIC.core.userbot - Stopping Assistants...
+[06-Dec-25 18:34:04 - INFO] - SHUKLAMUSIC - 𝗦𝗧𝗢𝗣 𝗦𝗧𝗥𝗔𝗡𝗚𝗘𝗥 𝗠𝗨𝗦𝗜𝗖🎻 𝗕𝗢𝗧..
+[06-Dec-25 18:34:07 - INFO] - SHUKLAMUSIC.core.mongo - Connecting to your Mongo Database...
+[06-Dec-25 18:34:07 - INFO] - SHUKLAMUSIC.core.mongo - Connected to your Mongo Database.
+[06-Dec-25 18:34:07 - INFO] - SHUKLAMUSIC.core.dir - Directories Updated.
+[06-Dec-25 18:34:07 - INFO] - SHUKLAMUSIC.core.git - Git Client Found [VPS DEPLOYER]
+[06-Dec-25 18:34:07 - INFO] - SHUKLAMUSIC.misc - 𝗗𝗔𝗧𝗔𝗕𝗔𝗦𝗘 𝗟𝗢𝗔𝗗 𝗕𝗔𝗕𝗬🍫........
+[06-Dec-25 18:34:07 - INFO] - SHUKLAMUSIC.core.bot - Starting Bot...
+[06-Dec-25 18:34:09 - INFO] - ShuklaMusic.platforms.Youtube.py - API URL loaded successfully
+[06-Dec-25 18:34:09 - INFO] - SHUKLAMUSIC.misc - 𝗦𝗨𝗗𝗢 𝗨𝗦𝗘𝗥 𝗗𝗢𝗡𝗘✨🎋.
+[06-Dec-25 18:34:15 - INFO] - SHUKLAMUSIC.core.bot - Music Bot Started as 𝗗𝗿𝗮𝗴𝗼𝗻 𝗫 𝗠𝘂𝘀𝗶𝗰 
+[06-Dec-25 18:34:15 - INFO] - SHUKLAMUSIC.plugins - 𝐀𝐥𝐥 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬 𝐋𝐨𝐚𝐝𝐞𝐝 𝐁𝐚𝐛𝐲🥳...
+[06-Dec-25 18:34:15 - INFO] - SHUKLAMUSIC.core.userbot - Starting Assistants...
+[06-Dec-25 18:34:17 - INFO] - SHUKLAMUSIC.core.userbot - Assistant Started as <a href=tg://user?id=8516123142>𝐀𝐧֟፝𝐬𝐡𝐮•ʏᴛ࿐</a>
+[06-Dec-25 18:34:17 - INFO] - SHUKLAMUSIC.core.call - Starting PyTgCalls Client...
+
+[06-Dec-25 18:34:23 - ERROR] - SHUKLAMUSIC - 𝗣𝗹𝗭 𝗦𝗧𝗔𝗥𝗧 𝗬𝗢𝗨𝗥 𝗟𝗢𝗚 𝗚𝗥𝗢𝗨𝗣 𝗩𝗢𝗜𝗖𝗘𝗖𝗛𝗔𝗧\𝗖𝗛𝗔𝗡𝗡𝗘𝗟
+
+𝗦𝗧𝗥𝗔𝗡𝗚𝗘𝗥 𝗕𝗢𝗧 𝗦𝗧𝗢𝗣........
+[06-Dec-25 18:34:58 - INFO] - SHUKLAMUSIC.core.mongo - Connecting to your Mongo Database...
+[06-Dec-25 18:34:58 - INFO] - SHUKLAMUSIC.core.mongo - Connected to your Mongo Database.
+[06-Dec-25 18:34:58 - INFO] - SHUKLAMUSIC.core.dir - Directories Updated.
+[06-Dec-25 18:34:58 - INFO] - SHUKLAMUSIC.core.git - Git Client Found [VPS DEPLOYER]
+[06-Dec-25 18:34:58 - INFO] - SHUKLAMUSIC.misc - 𝗗𝗔𝗧𝗔𝗕𝗔𝗦𝗘 𝗟𝗢𝗔𝗗 𝗕𝗔𝗕𝗬🍫........
+[06-Dec-25 18:34:58 - INFO] - SHUKLAMUSIC.core.bot - Starting Bot...
+[06-Dec-25 18:34:58 - INFO] - ShuklaMusic.platforms.Youtube.py - API URL loaded successfully
+[06-Dec-25 18:34:58 - INFO] - SHUKLAMUSIC.misc - 𝗦𝗨𝗗𝗢 𝗨𝗦𝗘𝗥 𝗗𝗢𝗡𝗘✨🎋.
+[06-Dec-25 18:35:04 - INFO] - SHUKLAMUSIC.core.bot - Music Bot Started as 𝗗𝗿𝗮𝗴𝗼𝗻 𝗫 𝗠𝘂𝘀𝗶𝗰 
+[06-Dec-25 18:35:04 - INFO] - SHUKLAMUSIC.plugins - 𝐀𝐥𝐥 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬 𝐋𝐨𝐚𝐝𝐞𝐝 𝐁𝐚𝐛𝐲🥳...
+[06-Dec-25 18:35:04 - INFO] - SHUKLAMUSIC.core.userbot - Starting Assistants...
+[06-Dec-25 18:35:06 - INFO] - SHUKLAMUSIC.core.userbot - Assistant Started as <a href=tg://user?id=8516123142>𝐀𝐧֟፝𝐬𝐡𝐮•ʏᴛ࿐</a>
+[06-Dec-25 18:35:06 - INFO] - SHUKLAMUSIC.core.call - Starting PyTgCalls Client...
+
+[06-Dec-25 18:35:12 - INFO] - SHUKLAMUSIC - ╔═════ஜ۩۞۩ஜ════╗
+  ☠︎︎𝗠𝗔𝗗𝗘 𝗕𝗬 𝗠𝗥 𝗦𝗛𝗜𝗩𝗔𝗡𝗦𝗛
+╚═════ஜ۩۞۩ஜ════╝
+[06-Dec-25 18:41:49 - INFO] - root - Stop signal received (SIGINT). Exiting...
+[06-Dec-25 18:41:49 - INFO] - SHUKLAMUSIC.core.userbot - Stopping Assistants...
+[06-Dec-25 18:41:49 - INFO] - SHUKLAMUSIC - 𝗦𝗧𝗢𝗣 𝗦𝗧𝗥𝗔𝗡𝗚𝗘𝗥 𝗠𝗨𝗦𝗜𝗖🎻 𝗕𝗢𝗧..
+[06-Dec-25 18:46:28 - INFO] - SHUKLAMUSIC.core.mongo - Connecting to your Mongo Database...
+[06-Dec-25 18:46:28 - INFO] - SHUKLAMUSIC.core.mongo - Connected to your Mongo Database.
+[06-Dec-25 18:46:28 - INFO] - SHUKLAMUSIC.core.dir - Directories Updated.
+[06-Dec-25 18:46:28 - INFO] - SHUKLAMUSIC.core.git - Git Client Found [VPS DEPLOYER]
+[06-Dec-25 18:46:28 - INFO] - SHUKLAMUSIC.misc - 𝗗𝗔𝗧𝗔𝗕𝗔𝗦𝗘 𝗟𝗢𝗔𝗗 𝗕𝗔𝗕𝗬🍫........
+[06-Dec-25 18:46:28 - INFO] - SHUKLAMUSIC.core.bot - Starting Bot...
+[06-Dec-25 18:46:28 - INFO] - ShuklaMusic.platforms.Youtube.py - API URL loaded successfully
+[06-Dec-25 18:46:29 - INFO] - SHUKLAMUSIC.misc - 𝗦𝗨𝗗𝗢 𝗨𝗦𝗘𝗥 𝗗𝗢𝗡𝗘✨🎋.
+[06-Dec-25 18:46:34 - INFO] - SHUKLAMUSIC.core.bot - Music Bot Started as 𝗗𝗿𝗮𝗴𝗼𝗻 𝗫 𝗠𝘂𝘀𝗶𝗰 
+[06-Dec-25 18:46:34 - INFO] - SHUKLAMUSIC.plugins - 𝐀𝐥𝐥 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬 𝐋𝐨𝐚𝐝𝐞𝐝 𝐁𝐚𝐛𝐲🥳...
+[06-Dec-25 18:46:34 - INFO] - SHUKLAMUSIC.core.userbot - Starting Assistants...
+[06-Dec-25 18:46:36 - INFO] - SHUKLAMUSIC.core.userbot - Assistant Started as <a href=tg://user?id=8516123142>𝐀𝐧֟፝𝐬𝐡𝐮•ʏᴛ࿐</a>
+[06-Dec-25 18:46:36 - INFO] - SHUKLAMUSIC.core.call - Starting PyTgCalls Client...
+
+[06-Dec-25 18:46:43 - INFO] - SHUKLAMUSIC - ╔═════ஜ۩۞۩ஜ════╗
+  ☠︎︎𝗠𝗔𝗗𝗘 𝗕𝗬 𝗠𝗥 𝗦𝗛𝗜𝗩𝗔𝗡𝗦𝗛
+╚═════ஜ۩۞۩ஜ════╝
+[06-Dec-25 18:53:48 - INFO] - root - Stop signal received (SIGINT). Exiting...
+[06-Dec-25 18:53:48 - INFO] - SHUKLAMUSIC.core.userbot - Stopping Assistants...
+[06-Dec-25 18:53:48 - INFO] - SHUKLAMUSIC - 𝗦𝗧𝗢𝗣 𝗦𝗧𝗥𝗔𝗡𝗚𝗘𝗥 𝗠𝗨𝗦𝗜𝗖🎻 𝗕𝗢𝗧..
+[06-Dec-25 18:53:52 - INFO] - SHUKLAMUSIC.core.mongo - Connecting to your Mongo Database...
+[06-Dec-25 18:53:52 - INFO] - SHUKLAMUSIC.core.mongo - Connected to your Mongo Database.
+[06-Dec-25 18:53:52 - INFO] - SHUKLAMUSIC.core.dir - Directories Updated.
+[06-Dec-25 18:53:52 - INFO] - SHUKLAMUSIC.core.git - Git Client Found [VPS DEPLOYER]
+[06-Dec-25 18:53:52 - INFO] - SHUKLAMUSIC.misc - 𝗗𝗔𝗧𝗔𝗕𝗔𝗦𝗘 𝗟𝗢𝗔𝗗 𝗕𝗔𝗕𝗬🍫........
+[06-Dec-25 18:53:52 - INFO] - SHUKLAMUSIC.core.bot - Starting Bot...
+[06-Dec-25 18:53:53 - INFO] - ShuklaMusic.platforms.Youtube.py - API URL loaded successfully
+[06-Dec-25 18:53:54 - INFO] - SHUKLAMUSIC.misc - 𝗦𝗨𝗗𝗢 𝗨𝗦𝗘𝗥 𝗗𝗢𝗡𝗘✨🎋.
+[06-Dec-25 18:53:59 - INFO] - SHUKLAMUSIC.core.bot - Music Bot Started as 𝗗𝗿𝗮𝗴𝗼𝗻 𝗫 𝗠𝘂𝘀𝗶𝗰 
+[06-Dec-25 18:54:14 - INFO] - SHUKLAMUSIC.core.mongo - Connecting to your Mongo Database...
+[06-Dec-25 18:54:14 - INFO] - SHUKLAMUSIC.core.mongo - Connected to your Mongo Database.
+[06-Dec-25 18:54:14 - INFO] - SHUKLAMUSIC.core.dir - Directories Updated.
+[06-Dec-25 18:54:14 - INFO] - SHUKLAMUSIC.core.git - Git Client Found [VPS DEPLOYER]
+[06-Dec-25 18:54:14 - INFO] - SHUKLAMUSIC.misc - 𝗗𝗔𝗧𝗔𝗕𝗔𝗦𝗘 𝗟𝗢𝗔𝗗 𝗕𝗔𝗕𝗬🍫........
+[06-Dec-25 18:54:14 - INFO] - SHUKLAMUSIC.core.bot - Starting Bot...
+[06-Dec-25 18:54:15 - INFO] - ShuklaMusic.platforms.Youtube.py - API URL loaded successfully
+[06-Dec-25 18:54:15 - INFO] - SHUKLAMUSIC.misc - 𝗦𝗨𝗗𝗢 𝗨𝗦𝗘𝗥 𝗗𝗢𝗡𝗘✨🎋.
+[06-Dec-25 18:54:21 - INFO] - SHUKLAMUSIC.core.bot - Music Bot Started as 𝗗𝗿𝗮𝗴𝗼𝗻 𝗫 𝗠𝘂𝘀𝗶𝗰 
+[06-Dec-25 18:59:23 - INFO] - SHUKLAMUSIC.core.mongo - Connecting to your Mongo Database...
+[06-Dec-25 18:59:23 - INFO] - SHUKLAMUSIC.core.mongo - Connected to your Mongo Database.
+[06-Dec-25 18:59:23 - INFO] - SHUKLAMUSIC.core.dir - Directories Updated.
+[06-Dec-25 18:59:23 - INFO] - SHUKLAMUSIC.core.git - Git Client Found [VPS DEPLOYER]
+[06-Dec-25 18:59:23 - INFO] - SHUKLAMUSIC.misc - 𝗗𝗔𝗧𝗔𝗕𝗔𝗦𝗘 𝗟𝗢𝗔𝗗 𝗕𝗔𝗕𝗬🍫........
+[06-Dec-25 18:59:23 - INFO] - SHUKLAMUSIC.core.bot - Starting Bot...
+[06-Dec-25 18:59:24 - INFO] - ShuklaMusic.platforms.Youtube.py - API URL loaded successfully
+[06-Dec-25 18:59:25 - INFO] - SHUKLAMUSIC.misc - 𝗦𝗨𝗗𝗢 𝗨𝗦𝗘𝗥 𝗗𝗢𝗡𝗘✨🎋.
+[06-Dec-25 18:59:30 - INFO] - SHUKLAMUSIC.core.bot - Music Bot Started as 𝗗𝗿𝗮𝗴𝗼𝗻 𝗫 𝗠𝘂𝘀𝗶𝗰 
+[06-Dec-25 18:59:30 - INFO] - SHUKLAMUSIC.plugins - 𝐀𝐥𝐥 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬 𝐋𝐨𝐚𝐝𝐞𝐝 𝐁𝐚𝐛𝐲🥳...
+[06-Dec-25 18:59:30 - INFO] - SHUKLAMUSIC.core.userbot - Starting Assistants...
+[06-Dec-25 18:59:32 - INFO] - SHUKLAMUSIC.core.userbot - Assistant Started as <a href=tg://user?id=8516123142>𝐀𝐧֟፝𝐬𝐡𝐮•ʏᴛ࿐</a>
+[06-Dec-25 18:59:32 - INFO] - SHUKLAMUSIC.core.call - Starting PyTgCalls Client...
+
+[06-Dec-25 18:59:38 - INFO] - SHUKLAMUSIC - ╔═════ஜ۩۞۩ஜ════╗
+  ☠︎︎𝗠𝗔𝗗𝗘 𝗕𝗬 𝗠𝗥 𝗦𝗛𝗜𝗩𝗔𝗡𝗦𝗛
+╚═════ஜ۩۞۩ஜ════╝
+[07-Dec-25 04:36:09 - INFO] - SHUKLAMUSIC.core.mongo - Connecting to your Mongo Database...
+[07-Dec-25 04:36:09 - INFO] - SHUKLAMUSIC.core.mongo - Connected to your Mongo Database.
+[07-Dec-25 04:36:09 - INFO] - SHUKLAMUSIC.core.dir - Directories Updated.
+[07-Dec-25 04:36:09 - INFO] - SHUKLAMUSIC.core.git - Git Client Found [VPS DEPLOYER]
+[07-Dec-25 04:36:09 - INFO] - SHUKLAMUSIC.misc - 𝗗𝗔𝗧𝗔𝗕𝗔𝗦𝗘 𝗟𝗢𝗔𝗗 𝗕𝗔𝗕𝗬🍫........
+[07-Dec-25 04:36:09 - INFO] - SHUKLAMUSIC.core.bot - Starting Bot...
+[07-Dec-25 04:36:11 - INFO] - ShuklaMusic.platforms.Youtube.py - API URL loaded successfully
+[07-Dec-25 04:36:12 - INFO] - SHUKLAMUSIC.misc - 𝗦𝗨𝗗𝗢 𝗨𝗦𝗘𝗥 𝗗𝗢𝗡𝗘✨🎋.
+[07-Dec-25 04:36:18 - INFO] - SHUKLAMUSIC.core.bot - Music Bot Started as 𝗗𝗿𝗮𝗴𝗼𝗻 𝗫 𝗠𝘂𝘀𝗶𝗰 
+[07-Dec-25 04:36:18 - INFO] - SHUKLAMUSIC.plugins - 𝐀𝐥𝐥 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬 𝐋𝐨𝐚𝐝𝐞𝐝 𝐁𝐚𝐛𝐲🥳...
+[07-Dec-25 04:36:18 - INFO] - SHUKLAMUSIC.core.userbot - Starting Assistants...
+[07-Dec-25 05:23:39 - INFO] - SHUKLAMUSIC.core.mongo - Connecting to your Mongo Database...
+[07-Dec-25 05:23:39 - INFO] - SHUKLAMUSIC.core.mongo - Connected to your Mongo Database.
+[07-Dec-25 05:23:39 - INFO] - SHUKLAMUSIC.core.dir - Directories Updated.
+[07-Dec-25 05:23:39 - INFO] - SHUKLAMUSIC.core.git - Git Client Found [VPS DEPLOYER]
+[07-Dec-25 05:23:39 - INFO] - SHUKLAMUSIC.misc - 𝗗𝗔𝗧𝗔𝗕𝗔𝗦𝗘 𝗟𝗢𝗔𝗗 𝗕𝗔𝗕𝗬🍫........
+[07-Dec-25 05:23:39 - INFO] - SHUKLAMUSIC.core.bot - Starting Bot...
+[07-Dec-25 05:23:41 - INFO] - ShuklaMusic.platforms.Youtube.py - API URL loaded successfully
+[07-Dec-25 05:23:42 - INFO] - SHUKLAMUSIC.misc - 𝗦𝗨𝗗𝗢 𝗨𝗦𝗘𝗥 𝗗𝗢𝗡𝗘✨🎋.
+[07-Dec-25 05:23:49 - INFO] - SHUKLAMUSIC.core.bot - Music Bot Started as 𝗗𝗿𝗮𝗴𝗼𝗻 𝗫 𝗠𝘂𝘀𝗶𝗰 
+[07-Dec-25 05:23:49 - INFO] - SHUKLAMUSIC.plugins - 𝐀𝐥𝐥 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬 𝐋𝐨𝐚𝐝𝐞𝐝 𝐁𝐚𝐛𝐲🥳...
+[07-Dec-25 05:23:49 - INFO] - SHUKLAMUSIC.core.userbot - Starting Assistants...
+[07-Dec-25 05:23:50 - ERROR] - SHUKLAMUSIC.core.userbot - Assistant Account 1 has failed to access the log Group. Make sure that you have added your assistant to your log group and promoted as admin!
+[07-Dec-25 05:25:14 - INFO] - SHUKLAMUSIC.core.mongo - Connecting to your Mongo Database...
+[07-Dec-25 05:25:14 - INFO] - SHUKLAMUSIC.core.mongo - Connected to your Mongo Database.
+[07-Dec-25 05:25:14 - INFO] - SHUKLAMUSIC.core.dir - Directories Updated.
+[07-Dec-25 05:25:14 - INFO] - SHUKLAMUSIC.core.git - Git Client Found [VPS DEPLOYER]
+[07-Dec-25 05:25:14 - INFO] - SHUKLAMUSIC.misc - 𝗗𝗔𝗧𝗔𝗕𝗔𝗦𝗘 𝗟𝗢𝗔𝗗 𝗕𝗔𝗕𝗬🍫........
+[07-Dec-25 05:25:14 - INFO] - SHUKLAMUSIC.core.bot - Starting Bot...
+[07-Dec-25 05:25:14 - INFO] - ShuklaMusic.platforms.Youtube.py - API URL loaded successfully
+[07-Dec-25 05:25:15 - INFO] - SHUKLAMUSIC.misc - 𝗦𝗨𝗗𝗢 𝗨𝗦𝗘𝗥 𝗗𝗢𝗡𝗘✨🎋.
+[07-Dec-25 05:25:20 - INFO] - SHUKLAMUSIC.core.bot - Music Bot Started as 𝗗𝗿𝗮𝗴𝗼𝗻 𝗫 𝗠𝘂𝘀𝗶𝗰 
+[07-Dec-25 05:25:21 - INFO] - SHUKLAMUSIC.plugins - 𝐀𝐥𝐥 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬 𝐋𝐨𝐚𝐝𝐞𝐝 𝐁𝐚𝐛𝐲🥳...
+[07-Dec-25 05:25:21 - INFO] - SHUKLAMUSIC.core.userbot - Starting Assistants...
+[07-Dec-25 05:25:22 - INFO] - SHUKLAMUSIC.core.userbot - Assistant Started as <a href=tg://user?id=8372147840>ᴛʜᴇ ɢᴏᴀᴛ 🪽</a>
+[07-Dec-25 05:25:22 - INFO] - SHUKLAMUSIC.core.call - Starting PyTgCalls Client...
+
+[07-Dec-25 05:25:41 - INFO] - SHUKLAMUSIC - ╔═════ஜ۩۞۩ஜ════╗
+  ☠︎︎𝗠𝗔𝗗𝗘 𝗕𝗬 𝗠𝗥 𝗦𝗛𝗜𝗩𝗔𝗡𝗦𝗛
+╚═════ஜ۩۞۩ஜ════╝
+[07-Dec-25 05:25:43 - INFO] - ShuklaMusic.platforms.Youtube.py - [LOCAL] File exists: downloads/JFUoE0ArWd4.mp3
+[07-Dec-25 05:38:22 - INFO] - ShuklaMusic.platforms.Youtube.py - [LOCAL] File exists: downloads/_ZMdLTUTB1c.mp3
+[07-Dec-25 05:40:12 - INFO] - ShuklaMusic.platforms.Youtube.py - [DOWNLOADED] downloads/JFUoE0ArWd4.mp3
+[07-Dec-25 05:45:52 - INFO] - root - Stop signal received (SIGINT). Exiting...
+[07-Dec-25 05:45:52 - INFO] - SHUKLAMUSIC.core.userbot - Stopping Assistants...
+[07-Dec-25 05:45:52 - INFO] - SHUKLAMUSIC - 𝗦𝗧𝗢𝗣 𝗦𝗧𝗥𝗔𝗡𝗚𝗘𝗥 𝗠𝗨𝗦𝗜𝗖🎻 𝗕𝗢𝗧..
