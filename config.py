@@ -35,8 +35,8 @@ UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
 GIT_TOKEN = getenv("GIT_TOKEN", None)
 
 # Support
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/ECHOWAVESUPPORT01")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/ECHOWAVESUPPORT")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/ECHOWAVESUPPORT")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/+sG4MieHq17w1MDBl")
 
 # YT-API Get from @AmShashank on tg
 YOUR_API_KEY = getenv("YOUR_API_KEY", "")
