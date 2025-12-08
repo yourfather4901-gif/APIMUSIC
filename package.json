@@ -1,0 +1,12 @@
+{
+  "name": "villain-music",
+  "version": "1.0.0",
+  "description": "VILLAIN_MUSIC bot",
+  "engines": {
+    "node": "18.x",
+    "npm": "9.x"
+  },
+  "scripts": {
+    "start": "echo 'Node ready!'"
+  }
+}
