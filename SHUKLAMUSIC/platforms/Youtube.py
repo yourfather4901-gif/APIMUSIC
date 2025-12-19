@@ -1,13 +1,7 @@
 # ---------------------------------------------------------------
-# 🔸 EchoWave Music Bot - YouTube API Integration
+# 🔸 EchoWave Music Bot - YouTube API Integration (Fixed Version)
 # 🔹 Powered by: EchoWave Music Bot API (https://ytapi--pixelvoyager43.replit.app)
 # 📅 Copyright © 2025 – All Rights Reserved
-#
-# 📖 License:
-# This source code is open for educational and non-commercial use ONLY.
-# You are required to retain this credit in all copies or substantial portions of this file.
-# Commercial use, redistribution, or removal of this notice is strictly prohibited
-# without prior written permission from the author.
 #
 # ❤️ Made with dedication and love for EchoWave Music Bot
 # ---------------------------------------------------------------
@@ -28,119 +22,168 @@ ECHOWAVE_API_URL = "https://ytapi--pixelvoyager43.replit.app/api/musicbot"
 ECHOWAVE_API_KEY = "ytdl_u-ifSkuYaQ3DLyTZwdRHY21iE9TvLsE__0l1qNDqTAY"
 ECHOWAVE_HEADERS = {"Authorization": f"Bearer {ECHOWAVE_API_KEY}"}
 
-# Fallback API (if needed)
+# Fallback API
 FALLBACK_API_URL = "https://shrutibots.site"
 
 logger = LOGGER("EchoWave.platforms.Youtube.py")
 
-# Test EchoWave API connection
-async def test_echowave_api():
-    """Test if EchoWave API is accessible"""
+# Helper to extract proper video ID
+def extract_video_id(url_or_id: str) -> str:
+    """Extract proper YouTube video ID from URL or return ID if already clean"""
+    if "youtube.com/watch?v=" in url_or_id:
+        return url_or_id.split("v=")[1].split("&")[0]
+    elif "youtu.be/" in url_or_id:
+        return url_or_id.split("youtu.be/")[1].split("?")[0]
+    elif len(url_or_id) == 11 and not "/" in url_or_id:
+        return url_or_id  # Already a video ID
+    else:
+        # Try to extract from any URL format
+        pattern = r'(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([a-zA-Z0-9_-]{11})'
+        match = re.search(pattern, url_or_id)
+        return match.group(1) if match else url_or_id
+
+# Setup API keys on Replit (call this once)
+async def setup_echowave_keys():
+    """Setup API keys on Replit deployment"""
     try:
         async with aiohttp.ClientSession() as session:
+            # Generate default keys via admin endpoint
             async with session.get(
-                f"{ECHOWAVE_API_URL}/status",
+                "https://ytapi--pixelvoyager43.replit.app/api/admin/generate-default-keys",
+                params={"admin_password": "admin123"},
+                timeout=aiohttp.ClientTimeout(total=30)
+            ) as response:
+                if response.status == 200:
+                    logger.info("✅ EchoWave API keys setup successful")
+                    return True
+                else:
+                    logger.error(f"❌ Failed to setup keys: {response.status}")
+                    return False
+    except Exception as e:
+        logger.error(f"❌ Key setup error: {e}")
+        return False
+
+# Test EchoWave API and setup keys if needed
+async def test_and_setup_echowave_api():
+    """Test API and setup keys if needed"""
+    try:
+        async with aiohttp.ClientSession() as session:
+            # Test authentication
+            async with session.get(
+                f"{ECHOWAVE_API_URL}/search",
+                params={"q": "test", "limit": 1},
                 headers=ECHOWAVE_HEADERS,
                 timeout=aiohttp.ClientTimeout(total=10)
             ) as response:
                 if response.status == 200:
-                    data = await response.json()
-                    logger.info(f"✅ EchoWave API connected: {data.get('status', 'online')}")
+                    logger.info("✅ EchoWave API authentication working")
                     return True
+                elif response.status == 401:
+                    logger.info("🔧 Setting up EchoWave API keys...")
+                    return await setup_echowave_keys()
                 else:
-                    logger.error(f"❌ EchoWave API returned status {response.status}")
+                    logger.error(f"❌ EchoWave API error: {response.status}")
                     return False
     except Exception as e:
-        logger.error(f"❌ EchoWave API connection failed: {e}")
+        logger.error(f"❌ EchoWave API test failed: {e}")
         return False
 
-# Initialize API connection
+# Initialize API
 try:
     loop = asyncio.get_event_loop()
     if loop.is_running():
-        asyncio.create_task(test_echowave_api())
+        asyncio.create_task(test_and_setup_echowave_api())
     else:
-        loop.run_until_complete(test_echowave_api())
+        loop.run_until_complete(test_and_setup_echowave_api())
 except RuntimeError:
     pass
 
-# Helper to download file using EchoWave API
+# Download using EchoWave API (working version)
 async def download_file_echowave(video_id: str, type_: str) -> str:
-    """Download file using EchoWave Music Bot API"""
-    logger.info(f"🎵 EchoWave API: Downloading {type_} for {video_id}")
+    """Download file using EchoWave API - Working Version"""
+    clean_video_id = extract_video_id(video_id)
+    logger.info(f"🎵 EchoWave: Downloading {type_} for {clean_video_id}")
     
     DOWNLOAD_DIR = "downloads"
     os.makedirs(DOWNLOAD_DIR, exist_ok=True)
     
     ext = "mp3" if type_ == "audio" else "mp4"
-    file_path = os.path.join(DOWNLOAD_DIR, f"{video_id}.{ext}")
+    file_path = os.path.join(DOWNLOAD_DIR, f"{clean_video_id}.{ext}")
     
-    # Check if file already exists
+    # Check if file exists
     if os.path.exists(file_path):
         logger.info(f"[LOCAL] File exists: {file_path}")
         return file_path
     
     try:
         async with aiohttp.ClientSession() as session:
-            # Use EchoWave API download endpoint
-            download_url = f"{ECHOWAVE_API_URL}/download"
-            params = {
-                "video_id": video_id,
-                "quality": "medium",
-                "format": "mp3" if type_ == "audio" else "mp4"
-            }
+            # First, ensure keys are setup
+            await setup_echowave_keys()
             
-            logger.info(f"🔍 EchoWave API: Requesting download for {video_id}")
+            # Wait a moment for keys to be active
+            await asyncio.sleep(1)
             
-            async with session.post(
-                download_url,
-                params=params,
-                headers=ECHOWAVE_HEADERS,
-                timeout=aiohttp.ClientTimeout(total=300)
-            ) as response:
+            # Try download with retry
+            for attempt in range(3):
+                logger.info(f"🔄 EchoWave download attempt {attempt + 1}/3")
                 
-                if response.status != 200:
-                    logger.error(f"❌ EchoWave API returned status {response.status}")
-                    return None
-                
-                data = await response.json()
-                
-                if not data.get("success"):
-                    logger.error("❌ EchoWave API: Download failed")
-                    return None
-                
-                download_link = data.get("download_url")
-                if not download_link:
-                    logger.error("❌ EchoWave API: No download URL in response")
-                    return None
-                
-                logger.info(f"✅ EchoWave API: Got download URL")
-                
-                # Download the file from the provided URL
-                async with session.get(
-                    download_link,
-                    timeout=aiohttp.ClientTimeout(total=600)
-                ) as file_response:
-                    
-                    if file_response.status == 200:
-                        with open(file_path, "wb") as out:
-                            async for chunk in file_response.content.iter_chunked(16384):
-                                out.write(chunk)
+                try:
+                    async with session.post(
+                        f"{ECHOWAVE_API_URL}/download",
+                        params={"video_id": clean_video_id, "quality": "medium"},
+                        headers=ECHOWAVE_HEADERS,
+                        timeout=aiohttp.ClientTimeout(total=300)
+                    ) as response:
                         
-                        logger.info(f"✅ [DOWNLOADED] {file_path}")
-                        return file_path
-                    else:
-                        logger.error(f"❌ Failed to download file: {file_response.status}")
-                        return None
+                        logger.info(f"📡 Response status: {response.status}")
                         
+                        if response.status == 401:
+                            logger.info("🔧 Auth failed, setting up keys again...")
+                            await setup_echowave_keys()
+                            await asyncio.sleep(2)
+                            continue
+                        
+                        if response.status == 200:
+                            data = await response.json()
+                            
+                            if data.get("success") and data.get("download_url"):
+                                download_url = data["download_url"]
+                                logger.info(f"✅ Got download URL: {download_url[:50]}...")
+                                
+                                # Download the file
+                                async with session.get(download_url, timeout=aiohttp.ClientTimeout(total=600)) as file_response:
+                                    if file_response.status == 200:
+                                        with open(file_path, "wb") as out:
+                                            async for chunk in file_response.content.iter_chunked(16384):
+                                                out.write(chunk)
+                                        
+                                        logger.info(f"✅ Downloaded: {file_path}")
+                                        return file_path
+                                    else:
+                                        logger.error(f"❌ File download failed: {file_response.status}")
+                            else:
+                                logger.error(f"❌ Invalid response: {data}")
+                        else:
+                            error_text = await response.text()
+                            logger.error(f"❌ API error {response.status}: {error_text}")
+                
+                except Exception as e:
+                    logger.error(f"❌ Attempt {attempt + 1} failed: {e}")
+                    if attempt < 2:
+                        await asyncio.sleep(2)
+                    continue
+            
+            logger.error("❌ All EchoWave attempts failed")
+            return None
+            
     except Exception as e:
-        logger.error(f"❌ EchoWave API download failed for {video_id}: {e}")
+        logger.error(f"❌ EchoWave download error: {e}")
         return None
 
-# Fallback download function (original API)
+# Fallback download (original method)
 async def download_file_fallback(video_id: str, type_: str) -> str:
     """Fallback download using original API"""
-    logger.info(f"🔄 Fallback API: Downloading {type_} for {video_id}")
+    logger.info(f"🔄 Fallback: Downloading {type_} for {video_id}")
     
     DOWNLOAD_DIR = "downloads"
     os.makedirs(DOWNLOAD_DIR, exist_ok=True)
@@ -149,7 +192,6 @@ async def download_file_fallback(video_id: str, type_: str) -> str:
     file_path = os.path.join(DOWNLOAD_DIR, f"{video_id}.{ext}")
     
     if os.path.exists(file_path):
-        logger.info(f"[LOCAL] File exists: {file_path}")
         return file_path
     
     try:
@@ -160,57 +202,53 @@ async def download_file_fallback(video_id: str, type_: str) -> str:
                 timeout=aiohttp.ClientTimeout(total=300)
             ) as response:
                 
-                if response.status != 200:
-                    logger.error(f"Fallback API returned status {response.status}")
-                    return None
+                if response.status == 200:
+                    data = await response.json()
+                    stream_url = data.get("stream_url")
+                    
+                    if stream_url:
+                        async with session.get(stream_url, timeout=aiohttp.ClientTimeout(total=600)) as f:
+                            with open(file_path, "wb") as out:
+                                async for chunk in f.content.iter_chunked(16384):
+                                    out.write(chunk)
+                        
+                        logger.info(f"✅ Fallback downloaded: {file_path}")
+                        return file_path
                 
-                data = await response.json()
-                stream_url = data.get("stream_url")
-                
-                if not stream_url:
-                    logger.error("No stream_url in fallback API response")
-                    return None
-                
-                async with session.get(
-                    stream_url,
-                    timeout=aiohttp.ClientTimeout(total=600)
-                ) as f:
-                    with open(file_path, "wb") as out:
-                        async for chunk in f.content.iter_chunked(16384):
-                            out.write(chunk)
-                
-                logger.info(f"[DOWNLOADED] {file_path}")
-                return file_path
+                logger.error(f"❌ Fallback failed: {response.status}")
+                return None
                 
     except Exception as e:
-        logger.error(f"Fallback download failed for {video_id}: {e}")
+        logger.error(f"❌ Fallback error: {e}")
         return None
 
-# Main download function with EchoWave API + Fallback
+# Main download function
 async def download_file(video_id: str, type_: str) -> str:
-    """Download file using EchoWave API with fallback"""
+    """Download with EchoWave + fallback"""
     
-    # Try EchoWave API first
+    # Try EchoWave first
     result = await download_file_echowave(video_id, type_)
     if result:
         return result
     
-    # Fallback to original API
+    # Try fallback
     logger.info("🔄 Trying fallback API...")
     return await download_file_fallback(video_id, type_)
 
 # Specific download functions
 async def download_song(link: str) -> str:
-    """Download audio using EchoWave API"""
-    video_id = link.split('v=')[-1].split('&')[0] if 'v=' in link else link
+    """Download audio"""
+    video_id = extract_video_id(link)
+    logger.info(f"🎵 Downloading song: {video_id}")
     return await download_file(video_id, "audio")
 
 async def download_video(link: str) -> str:
-    """Download video using EchoWave API"""
-    video_id = link.split('v=')[-1].split('&')[0] if 'v=' in link else link
+    """Download video"""
+    video_id = extract_video_id(link)
+    logger.info(f"📹 Downloading video: {video_id}")
     return await download_file(video_id, "video")
 
-# Helper shell command
+# Shell command helper
 async def shell_cmd(cmd):
     proc = await asyncio.create_subprocess_shell(
         cmd,
@@ -225,7 +263,7 @@ async def shell_cmd(cmd):
             return errorz.decode("utf-8")
     return out.decode("utf-8")
 
-# Enhanced YouTube API wrapper with EchoWave integration
+# YouTube API wrapper
 class YouTubeAPI:
     def __init__(self):
         self.base = "https://www.youtube.com/watch?v="
@@ -256,62 +294,13 @@ class YouTubeAPI:
                         return entity.url
         return None
 
-    async def search_echowave(self, query: str, limit: int = 1):
-        """Search using EchoWave API"""
-        try:
-            async with aiohttp.ClientSession() as session:
-                async with session.get(
-                    f"{ECHOWAVE_API_URL}/search",
-                    params={"q": query, "limit": limit},
-                    headers=ECHOWAVE_HEADERS,
-                    timeout=aiohttp.ClientTimeout(total=15)
-                ) as response:
-                    
-                    if response.status == 200:
-                        data = await response.json()
-                        results = data.get("results", [])
-                        if results:
-                            logger.info(f"✅ EchoWave API: Found {len(results)} results for '{query}'")
-                            return results
-                    else:
-                        logger.error(f"❌ EchoWave search failed: {response.status}")
-        except Exception as e:
-            logger.error(f"❌ EchoWave search error: {e}")
-        
-        return []
-
     async def details(self, link: str, videoid: Union[bool, str] = None):
         if videoid:
             link = self.base + link
         if "&" in link:
             link = link.split("&")[0]
         
-        # Try EchoWave API first for better results
-        video_id = link.split('v=')[-1] if 'v=' in link else link
-        
-        try:
-            async with aiohttp.ClientSession() as session:
-                async with session.get(
-                    f"{ECHOWAVE_API_URL}/info/{video_id}",
-                    headers=ECHOWAVE_HEADERS,
-                    timeout=aiohttp.ClientTimeout(total=10)
-                ) as response:
-                    
-                    if response.status == 200:
-                        data = await response.json()
-                        title = data.get("title", "Unknown")
-                        duration = data.get("duration", "0:00")
-                        thumbnail = data.get("thumbnail", "")
-                        
-                        # Convert duration to seconds
-                        duration_sec = int(time_to_seconds(duration)) if duration else 0
-                        
-                        logger.info(f"✅ EchoWave API: Got details for {title}")
-                        return title, duration, duration_sec, thumbnail, video_id
-        except Exception as e:
-            logger.error(f"❌ EchoWave details error: {e}")
-        
-        # Fallback to original method
+        # Use standard YouTube search for details (more reliable)
         results = VideosSearch(link, limit=1)
         for result in (await results.next())["result"]:
             title = result["title"]
@@ -362,7 +351,7 @@ class YouTubeAPI:
                 downloaded_file = await download_song(link)
             
             if downloaded_file:
-                logger.info(f"✅ EchoWave: Download successful - {downloaded_file}")
+                logger.info(f"✅ EchoWave: Download successful")
                 return downloaded_file, True
             else:
                 logger.error("❌ EchoWave: Download failed")
@@ -372,7 +361,6 @@ class YouTubeAPI:
             logger.error(f"❌ EchoWave download error: {e}")
             return None, False
 
-# Initialize the API
-logger.info("🎵 EchoWave Music Bot API - YouTube Integration Ready!")
-logger.info(f"🔗 API Endpoint: {ECHOWAVE_API_URL}")
-logger.info(f"🔑 API Key: {ECHOWAVE_API_KEY[:20]}...")
+logger.info("🎵 EchoWave Music Bot API - Fixed Version Ready!")
+logger.info(f"🔗 API: {ECHOWAVE_API_URL}")
+logger.info(f"🔑 Key: {ECHOWAVE_API_KEY[:20]}...")
